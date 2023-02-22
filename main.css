@@ -1,0 +1,196 @@
+body {
+    display: flex;
+    flex-direction: column;
+    /*makes whatever in body stuff vertical*/
+    min-width: 375px;
+    /*not sure the size yet*/
+}
+
+menu {
+    flex: 1;
+    /*makes menu on left side instead od right*/
+
+    display: flex;
+    /*set with line above?*/
+
+    flex-direction: row !important;
+    /*  overwrite Bootstrap so the menu does not wrap */
+    /*menu was placed vertically, but now it is placed horidontally*/
+
+    list-style: none;
+    /*if you want bullet on list */
+}
+
+.navbar-brand {
+    padding-left: 0.3em;
+    /*space on left size of logo*/
+    border-bottom: solid rgb(182, 182, 182) thin;
+    /*add thin line on the bottome of simon logo*/
+}
+
+menu .nav-item {
+    padding: 0 0.3em;
+    /*0 as how far from top to menu, 0.3 as how far between each item*/
+}
+
+footer a {
+    float: right;
+    /*makes the GitHub button on left*/
+}
+
+main {
+    flex: 1 calc(100vh - 110px);
+    /*not sure this size yet*/
+    display: flex;
+    flex-direction: column;
+    /*things on vertical*/
+    align-items: center;
+    /*make things come to the middle of screen*/
+    justify-content: space-around;
+    /*not sure yet*/
+}
+
+header {
+    flex: 0 80px;
+    /*not sure this size yet*/
+}
+
+
+footer {
+    flex: 0 30px;
+    /*not sure this size yet*/
+}
+
+.players {
+    flex: 1;
+    /*makes the text to the middle */
+    width: 100%;
+    /*makes the text goes left midle, not too sure */
+    padding: 0.5em;
+    /*space not only from edge but how far from the corner*/
+}
+
+.game {
+    background: rgb(0, 0, 0);
+    border-radius: 50%;
+    /*make circle*/
+    box-shadow: 0 0 20px 5px rgb(69, 69, 69);
+    /*shadow around circle*/
+    width: 80vw;
+    /*width and height have to be same number to make a perfect circle, more number then bigger circle*/
+    height: 80vw;
+    position: absolute;
+    /*place it in the middle of screen*/
+    min-width: 350px;
+    /*how smmall the circle can get when you make screen small*/
+    min-height: 350px;
+    max-width: min(80vmin, 1000px);
+    max-height: min(80vmin, 1000px);
+}
+
+.button-container {
+    width: 100%;
+    /*even though width and height are the same number, it is not sqaure, but rectangle*/
+    height: 100%;
+    display: grid;
+    /*make the buttons visual*/
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.button-top-left {
+    border-radius: 100% 0 0 0;
+    /*this can bend the rectangle*/
+    margin: 20px 0 0 20px;
+    background-color: green;
+    border: thick solid rgb(36, 53, 0);
+    /*color on the line */
+}
+
+.button-top-right {
+    border-radius: 0 100% 0 0;
+    margin: 20px 20px 0 0;
+    background-color: red;
+    border: thick solid rgb(83, 12, 12);
+}
+
+.button-bottom-left {
+    border-radius: 0 0 0 100%;
+    margin: 0 0 20px 20px;
+    background-color: yellow;
+    border: thick solid rgb(130, 124, 13);
+}
+
+.button-bottom-right {
+    border-radius: 0 0 100% 0;
+    margin: 0 20px 20px 0;
+    background-color: blue;
+    border: thick solid rgb(27, 14, 100);
+}
+
+.controls {
+    position: absolute;
+    /*make the buttons fit on black circle*/
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    background-color: black;
+    padding: 2em;
+    /*this change the size of circle*/
+    display: flex;
+    /*flex +center +space around makes all the info on circle middle*/
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    /*contents on circle in veritical*/
+}
+
+.player-name {
+    color: rgb(118, 190, 210);
+    /*change the Mystery player to this color*/
+}
+
+.score {
+    position: absolute;
+    text-align: center;
+    /*this makes the -- in the middle*/
+    font-size: 20px;
+    font-family: monospace;
+    font-weight: bold;
+    color: red;
+    cursor: default;
+    /*not sure what this does*/
+    width: 50px;
+    height: 30px;
+    border-radius: 10px;
+    border: solid thin rgb(117, 0, 0);
+    background-color: #300;
+}
+
+.center {
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+/*makes the score counter in a middle of circle*/
+
+.game-name {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+
+@media (max-height: 600px) {
+    header {
+        display: none;
+    }
+
+    footer {
+        display: none;
+    }
+
+    main {
+        flex: 1 100vh;
+    }
+}
