@@ -21,7 +21,7 @@
             <a class="navbar-brand" href="#">Simon<sup>&reg;</sup></a> <!--makes Simon bigger as page gets wider-->
             <menu class="navbar-nav"> <!--without this line, it looks just a list with bullet-->
                 <li class="nav-item"> <!--makes more space between items in navvar-->
-                    <a class="nav-link" href="index.html">Home</a>
+                    <a class="nav-link active" href="index.html">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="play.html">Play</a>
@@ -30,7 +30,7 @@
                     <a class="nav-link" href="scores.html">Scores</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="about.html">About</a>
+                    <a class="nav-link" href="about.html">About</a>
                     <!--active makes the text white, so that it indicates you are on this tab-->
                 </li>
             </menu>
@@ -38,13 +38,14 @@
     </header>
 
     <main class="container-fluid bg-secondary text-center">
-        <h1>Welcocme</h1>
-        <p>Login to play</p>
-        <form method="get" action="play.html">
-            <label for="name">Name</label>
-            <input type="text" id="name" placeholder="Yourname here" />
-            <button type="submit">Login</button>
-        </form>
+        <div>
+            <h1>Welcocme</h1>
+            <p>Login to play</p>
+            <form method="get" action="play.html">
+                <input type="text" id="name" placeholder="Yourname here" />
+                <button type="submit" class="btn btn-primary">Login</button>
+            </form>
+        </div>
     </main>
 
     <footer class="bg-dark text-dark text-muted">
