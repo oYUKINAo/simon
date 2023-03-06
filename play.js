@@ -33,6 +33,7 @@ class Button {
         });
     }
 }
+
 class Game {
     buttons;
     allowPlayer;
@@ -56,7 +57,6 @@ class Game {
         const playerNameEl = document.querySelector('.player-name');
         playerNameEl.textContent = this.getPlayerName();
     }
-
     async pressButton(button) {
         if (this.allowPlayer) {
             this.allowPlayer = false;
@@ -101,7 +101,6 @@ class Game {
             await delay(100);
         }
     }
-
     addButton() {
         const btn = this.getRandomButton();
         this.sequence.push(btn);
@@ -136,7 +135,6 @@ class Game {
 
         localStorage.setItem('scores', JSON.stringify(scores));
     }
-
     updateScores(userName, score, scores) {
         const date = new Date().toLocaleDateString();
         const newScore = { name: userName, score: score, date: date };
@@ -175,3 +173,4 @@ function delay(milliseconds) {
 function loadSound(filename) {
     return new Audio('assets/' + filename);
 }
+
