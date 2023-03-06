@@ -161,6 +161,7 @@ class Game {
         return scores;
     }
 }
+
 const game = new Game();
 
 function delay(milliseconds) {
