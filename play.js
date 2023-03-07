@@ -4,6 +4,7 @@ const btnDescriptions = [
     { file: 'sound3.mp3', hue: 60 },
     { file: 'sound4.mp3', hue: 240 },
 ];
+//adding sounds 
 
 class Button {
     constructor(description, el) {
