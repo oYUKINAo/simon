@@ -1,5 +1,5 @@
-| Column 1 Header | Column 2 Header | Column 3 Header |
-|-----------------|-----------------|-----------------|
-| Row 1 Data 1    | Row 1 Data 2    | Row 1 Data 3    |
-| Row 2 Data 1    | Row 2 Data 2    | Row 2 Data 3    |
-| Row 3 Data 1    | Row 3 Data 2    | Row 3 Data 3    |
+| Fruit   | Color    | Quantity |
+|---------|----------|----------|
+| Apple   | Red      | 10       |
+| Banana  | Yellow   | 5        |
+| Cherry  | Red      | 20       |
